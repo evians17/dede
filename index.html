@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilosperrito.css"> 
+    <title>EdadPerrito</title>
+</head>
+<body>    
+
+
+<header><h1>CALCULADORA</h1></header>
+<section class="res">
+<br><br><br>
+<img src="jack.jfif">
+
+<br><br><br>
+
+<div class="input-group">
+  <label class="label">INGRESE EL NOMBRE DE TU CAN: </label>
+  <input autocomplete="off" id="name" class="input" type="text">
+  <br><br>
+  <label class="label">SU EDAD: </label>
+  <input autocomplete="off" id="nro1" class="input" type="number">
+</div>
+<br><br><br>
+
+<div id="buttom">
+ <button id="btn">Por log</button>
+ <button id="btn2">Por x7</button>
+</div>
+<br><br>
+ <div id="resultado"></div>
+
+
+ 
+ <script>
+  var b=document.getElementById('btn');
+  b.addEventListener('click',log);
+  var r=document.getElementById('btn2');
+  r.addEventListener('click',sev);
+  function log() 
+  {
+   var n1=parseInt(document.getElementById('nro1').value);
+   var e=16*Math.log(n1)+31;
+   num=e.toFixed(0);
+   document.getElementById("resultado").innerHTML = "la edad de tu perro en años humanos es: "+num
+  }
+
+  function sev() 
+  {
+   var n1=parseInt(document.getElementById('nro1').value);
+   var e=n1*7;
+   num=e.toFixed(0);
+   document.getElementById("resultado").innerHTML = "La edad de tu perro en años humanos es: "+num
+  }
+ </script>
+
+</section>
+</body>
